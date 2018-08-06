@@ -1,0 +1,62 @@
+\documentclass[cjk,slidestop,compress,mathserif]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{JuanLesPins}
+\usepackage{ctex}
+\newcommand{\ud}{\mathrm{d}}%非斜体的d
+\newcommand{\uln}{\mathrm{ln}}
+\usecolortheme{seahorse}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\author{刘博远, 2013012221\\ 物理 32, 清华大学物理系}
+\title{磁控溅射镀膜}
+\begin{document}
+%\beamertemplatetransparentcovereddynamicmedium
+\begin{frame}
+\titlepage
+\end{frame}
+\section{基本原理}
+\begin{frame}
+\frametitle{气体辉光放电}
+
+\begin{itemize}
+\begin{columns}
+
+\begin{column}{0.65\textwidth}
+\pause \item 击穿电压（Paschen's law$^{[2]}$）\\
+\pause $V_{b}=\frac{a\cdot pd}{b+\uln(pd)}$\\
+其中$a$、$b$是和气体、电极性质有关的常数，$p$是气体压强 
+\pause \item 正常辉光放电（$0.1\sim 10$Pa Ar气）
+\pause \item 反常辉光放电（溅射区）：\\
+\pause $U=E+Fj/p$\\
+其中$F$和$E$是取决于电极材料、几何尺寸和气体成分的常数，$j$是电流密度
+\end{column}
+
+\begin{column}{0.35\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{charge.png}
+\caption{\begin{tiny}
+气体放电的$U-I$曲线$^{[3]}$
+\end{tiny}}
+\end{figure}
+\end{column}
+\end{columns}
+\end{itemize}
+\end{frame}
+
+\section{Thanks for your attention}
+\begin{frame}
+\centering
+\large{Thanks for your attention}
+\begin{itemize}
+\item 参考文献
+\begin{itemize}
+\item $[1]$ 实验讲义. \\
+\item $[2]$ Paschen's law, wikipedia.
+\item $[3]$ Glow discharge, wikipedia. 
+\end{itemize}
+\end{itemize}
+\end{frame}
+\end{document}

@@ -1,0 +1,108 @@
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+%\usepackage{newtxtext,newtxmath}
+\usepackage{amsfonts}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+%\usepackage{morefloats}% A pacakge which enables this text to contain more figures and tables.
+\usepackage{grffile}% A pacakge which changes the algorithm to check for known extensions, so that we can insert pdf figures into this text.
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[Homework 2]{Homework 2 for Introduction to Observational Cosmology}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[Bo-Yuan Liu]{Bo-Yuan Liu$^{1}$\thanks{E-mail: liu-by13@mails.tsinghua.edu.cn}
+\\
+% List of institutions
+$^{1}$Department of Physics, Tsinghua University, Beijing, China(PRC)\\
+}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2016}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+I selected a universe with $\Omega_{R,0}=1$, $\Omega_{\Lambda,0}=1$, $\Omega_{M,0}=0$, and $\Omega_{C,0}=(1-1-1)=-1$, which means that we are now at the very moment when ``the light'' and ``the darkness'' are in balance for a positively curved space without any matter. From Friedman equations, I calculated analytically the age $t(a)$, the horizon $\chi_{hor}(a)$ and the deceleration parameter $q(a)$. The results for the present are $t_{0}=t(1)\sim 8\mathrm{Gyr}$, and $\chi_{hor,0}=\chi_{hor}(1)\sim 4.8\mathrm{Gpc}$. It is shown that this universe expands continuously, and we are at the very point where it shifts from decelerating expansion to accelerating expansion ($\ddot{a}=0$). I did not check my results on the given website in that it cannot include radiation. I also calculated several luminosity distances under different redshifts, and plotted the $d_{L}-z$, $d_{A}-z$ and $d_{M}-z$ diagrams to illustrate the relations among the luminosity distance $d_{L}$, the angular diameter distance $d_{A}$, the proper motion distance $d_{M}$ and the redshit $z$.
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+Friedman equations -- universe: age, horizon, deceleration parameter
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+ 
+\section{General formulas}
+
+
+\bibliographystyle{mnras}
+\bibliography{ref} 
+
+\label{lastpage}
+\end{document}
