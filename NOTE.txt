@@ -1,0 +1,34 @@
+TEX 3.14159265 宏语言
+
+Distro 发行版：
+TEX Live(跨平台， 4.7G), MiK TEX, Mac TEX
+
+编辑器：
+Texmaker, Texstudio
+
+\documentclass{ctexart}
+获取模板
+\begin{itemize} 条目
+\item[]
+\end{itemize}
+尽量不要使用”上图“之类的说法，用编号
+~空格但不换行
+交叉引用：在出现编号的地方可用\label{name}命名，\ref{name}显示此编号（编译两次）
+\tableofcontents 目录
+
+清华学位论文宏包：THUTHESIS
+github
+
+引用：
+ref.bib
+\cite{key}
+\onlinecite{key}
+
+中文：CTEX 宏集 xeCJK, 使用XeLaTeX
+
+参考文档：
+symbols
+Mathmode
+www.LaTexStudio.net
+
+tuna.moe

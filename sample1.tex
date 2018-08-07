@@ -46,7 +46,9 @@
 \usepackage{graphicx}	% Including figure files
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
-
+\usepackage[position=top]{subfig}
+\usepackage{float}
+\usepackage{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
@@ -54,28 +56,47 @@
 % Please keep new commands to a minimum, and use \newcommand not \def to avoid
 % overwriting existing commands. Example:
 %\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+\newcommand\HII{{H\,\textsc{ii}}} % ionized hydrogen
+\usepackage{etoolbox}
+\makeatletter % Workaround to only color the year for cite commands
+  % Patch case where name and year are separated by aysep
+  \patchcmd{\NAT@citex}
+    {\@citea\NAT@hyper@{%
+      \NAT@nmfmt{\NAT@nm}%
+      \hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+      \NAT@date}}
+    {\@citea\NAT@nmfmt{\NAT@nm}%
+    \NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+  % Patch case where name and year are separated by opening bracket
+  \patchcmd{\NAT@citex}
+    {\@citea\NAT@hyper@{%
+      \NAT@nmfmt{\NAT@nm}%
+      \hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+        {\@citeb\@extra@b@citeb}%
+      \NAT@date}}
+    {\@citea\NAT@nmfmt{\NAT@nm}%
+    \NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}
+    {}{}
+\makeatother
 %%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Homework 2]{Homework 2 for Introduction to Observational Cosmology}
+\title[Chemistry of primordial gas]{Chemistry of primordial gas: reaction rates and cooling functions}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
-\author[Bo-Yuan Liu]{Bo-Yuan Liu$^{1}$\thanks{E-mail: liu-by13@mails.tsinghua.edu.cn}
+\author[Boyuan Liu]{Boyuan Liu$^{1}$\thanks{E-mail: boyuan@utexas.edu}
 \\
 % List of institutions
-$^{1}$Department of Physics, Tsinghua University, Beijing, China(PRC)\\
-}
+$^{1}$Department of Astronomy, University of Texas, Austin, TX 78705, USA}
 
 % These dates will be filled out by the publisher
 \date{Accepted XXX. Received YYY; in original form ZZZ}
 
 % Enter the current year, for the copyright statements etc.
-\pubyear{2016}
+\pubyear{2017}
 
 % Don't change these lines
 \begin{document}
@@ -85,13 +106,13 @@ $^{1}$Department of Physics, Tsinghua University, Beijing, China(PRC)\\
 
 % Abstract of the paper
 \begin{abstract}
-I selected a universe with $\Omega_{R,0}=1$, $\Omega_{\Lambda,0}=1$, $\Omega_{M,0}=0$, and $\Omega_{C,0}=(1-1-1)=-1$, which means that we are now at the very moment when ``the light'' and ``the darkness'' are in balance for a positively curved space without any matter. From Friedman equations, I calculated analytically the age $t(a)$, the horizon $\chi_{hor}(a)$ and the deceleration parameter $q(a)$. The results for the present are $t_{0}=t(1)\sim 8\mathrm{Gyr}$, and $\chi_{hor,0}=\chi_{hor}(1)\sim 4.8\mathrm{Gpc}$. It is shown that this universe expands continuously, and we are at the very point where it shifts from decelerating expansion to accelerating expansion ($\ddot{a}=0$). I did not check my results on the given website in that it cannot include radiation. I also calculated several luminosity distances under different redshifts, and plotted the $d_{L}-z$, $d_{A}-z$ and $d_{M}-z$ diagrams to illustrate the relations among the luminosity distance $d_{L}$, the angular diameter distance $d_{A}$, the proper motion distance $d_{M}$ and the redshit $z$.
+blablabla...
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
-Friedman equations -- universe: age, horizon, deceleration parameter
+molecular processes -- stars: formation -- galaxies:formation -- cosmology: theory -- early Universe.
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
